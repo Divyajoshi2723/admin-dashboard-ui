@@ -261,23 +261,32 @@ td{
 }
 
 /* RESPONSIVE */
-@media(max-width:900px){
+/* Tablet and below */
+@media (max-width: 1024px){
   .content{
     grid-template-columns:1fr;
   }
 }
 
-@media(max-width:768px){
+/* Mobile only */
+@media (max-width: 768px){
   .sidebar{
-    left:-100%;
-    transition:.3s;
+    position:fixed;
+    left:-260px;
+    top:0;
+    height:100vh;
+    z-index:1000;
+    transition:0.3s ease;
   }
+
   .sidebar.active{
     left:0;
   }
+
   .main{
     margin-left:0;
   }
+
   .menu-btn{
     display:block;
   }
